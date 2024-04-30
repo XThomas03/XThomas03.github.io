@@ -1,0 +1,55 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+
+.container-fluid h1 {
+  margin-left: 2rem;
+}
+
+.img_logo {
+  width: 8rem;
+}
+
+.form-control.me-2 {
+  width: auto;
+  max-width: 10rem;
+  background-color: rgb(109, 178, 180);
+  margin-left: 3rem;
+}
+
+.navbar-nav a {
+  color: black;
+}
+
+.navbar-nav {
+  margin-right: 2rem;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.color1 {
+  color: rgb(79, 131, 133);
+}
+
+.color2 {
+  color: rgb(79, 131, 133);
+}
+
+.color3 {
+  color: rgb(79, 131, 133);
+}
+
+.img-estudiante {
+  width: 3.8rem;
+}
+
+.dropdown-item {
+  background-color: rgb(109, 178, 180) !important;
+}
+

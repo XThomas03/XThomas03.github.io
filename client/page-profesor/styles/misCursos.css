@@ -1,0 +1,21 @@
+.card-img-top img{
+    width: 0.5rem;
+}
+.container-card-tutorials{
+    justify-content: center;
+}
+.card-flex{
+    display: flex;
+    
+}
+.card-flex > div{
+    flex:50%;
+    margin: 20px;
+    padding: 40px;
+}
+
+@media (max-width: 800px) {
+    .card-flex {
+        flex-wrap: wrap;
+    }
+}
