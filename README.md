@@ -51,8 +51,6 @@ Acerca del Proyecto
 
 
 ###
-Planilla en Trello - Enlace -
-https://trello.com/invite/b/Q0OwmHvp/ATTI48103beec5c482a38da51b3ec4d09cdbA080A34D/plataforma-escolar
 
 Figma del proyecto - Enlace -
 https://www.figma.com/file/tmhKX8iK2akFhcQdjoIAw0/RENDIX%2FNo-country?type=design&node-id=0%3A1&mode=design&t=zFe54YYJ7VymMLVx-1
