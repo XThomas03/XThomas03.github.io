@@ -1,0 +1,237 @@
+/* Estilo general del formulario */
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #F2F2F2;
+}
+
+form {
+  width: 60%;
+  max-height: 10000px;
+  margin: auto;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin-bottom: 25px;
+}
+
+#abm-proveedores select {
+  width: 50%;
+  margin-top: 10px;
+}
+
+/* Títulos */
+h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #0060A8;
+}
+
+.bloques {
+  margin-top: 15px;
+  padding: 8px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+}
+
+/* Etiquetas y entradas */
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select {
+  width: calc(100% - 20px);
+  padding: 6px;
+  border: 1px solid #00BFCF;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Botones */
+button {
+  padding: 8px 16px;
+  background-color: #00BFCF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+button:hover {
+  border-color: #0173bc;
+}
+
+/* Archivo */
+input[type="file"] {
+  margin-bottom: 10px;
+}
+
+/* Estilos de la barra de navegación */
+.navbar {
+  background-color: white;
+  color: #0060A8;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 60px;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  padding-right: 15px;
+  padding-top: 20px;
+  margin: 0;
+}
+
+.navbar .nav-links li {
+  display: inline;
+  margin-right: 15px;
+}
+
+.navbar .nav-links li:last-child {
+  margin-right: 0;
+}
+
+.navbar .nav-links li a {
+  color: #0173bc;
+  text-decoration: none;
+}
+
+.navbar .nav-links li a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos del footer */
+.footer {
+  background-color: #0060A8;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+}
+
+/* Estilos para las secciones */
+.bloques {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+
+/* Estilos para mostrar los elementos en línea */
+#abm-proveedores {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 15px;
+  background-color: #9E4BDF;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#abm-proveedores label {
+  margin-right: 10px;
+  color: white;
+}
+
+/* Estilos para los checkboxes */
+input[type="checkbox"] {
+  width: 30px;
+  margin: 0 5px;
+}
+
+/* Estilos para los botones expandibles */
+.collapsible {
+  cursor: pointer;
+  padding: 8px 16px;
+  width: calc(100% - 32px);
+  height: 36px;
+  border: 1px solid #0173bc;
+  border-radius: 5px;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  background-color: #00BFCF;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.collapsible:hover {
+  background-color: #0173bc;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+
+/* Estilos de los campos del formulario cuando están enfocados */
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+select:focus {
+  border-color: #0173bc; /* Cambia el color del borde al enfocar el campo */
+  box-shadow: 0 0 5px rgba(#0173bc); /* Agrega una sombra al campo */
+  outline: none;
+  transition: 0.5s;
+}
+
+.inputfile-1 {
+  /* Ocultar el texto por defecto del input */
+  display: none;
+}
+
+.inputfile-1 + label {
+  color: #fff;
+  background-color: #00BFCF;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.inputfile-1:focus + label,
+.inputfile-1.has-focus + label,
+.inputfile-1 + label:hover {
+  background-color: #0173bc;
+  transition: 0.5s;
+}
+
+.iborrainputfile {
+  font-size: 16px;
+  font-weight: normal;
+  font-family: 'Lato';
+  margin-right: 10px;
+}
+
+.iborrainputfile-label {
+  display: flex;
+  align-items: center;
+}
+
+#datos_adicionales {
+  width: 400px;
+}
+
+textarea {
+  resize: none;
+}

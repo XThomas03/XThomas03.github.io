@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <title>Alta de Proveedores</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Noticias</a></li>
+                <li><a href="#">Documentos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1>Alta de Proveedores</h1>
+
+    <section>
+        <form>
+            <section id="abm-proveedores">
+                <label for="tipo_empresa">Sociedad</label>
+                <select id="tipo_empresa" name="tipo_empresa" required>
+                    <option value="POEN">POEN</option>
+                    <option value="MAX_VISION">MAX VISION</option>
+                </select>
+                <input type="checkbox" id="alta" name="alta" value="alta" onchange="document.getElementById('modificacion').checked = !this.checked">
+                <label for="alta">Alta</label><br>
+                <input type="checkbox" id="modificacion" name="modificacion" value="modificacion" onchange="document.getElementById('alta').checked = !this.checked">
+                <label for="modificacion">Modificación</label><br>
+            </section>
+            <button class="collapsible">Datos Principales:</button>
+            <section class="bloques">
+                <section>
+
+                    <div>
+                        <label for="razon_social">Razón Social:</label>
+                        <input type="text" id="razon_social" name="razon_social" required placeholder="Ingrese la Razón Social">
+                    </div>
+
+                    <div>
+                        <label for="cuit">CUIT:</label>
+                        <input type="number" id="cuit" name="cuit" required min="0" placeholder="Ingrese el CUIT">
+                    </div>
+
+                    <div>
+                        <label for="actividad_concepto">Actividad/Concepto:</label>
+                        <input type="text" id="actividad_concepto" name="actividad_concepto" required placeholder="Ingrese la Actividad/Concepto">
+                    </div>
+
+                    <div>
+                        <label for="direccion">Dirección:</label>
+                        <input type="text" id="direccion" name="direccion" required placeholder="Ingrese la Dirección">
+                    </div>
+
+                    <div>
+                        <label for="codigo_postal">Código Postal:</label>
+                        <input type="number" id="codigo_postal" name="codigo_postal" required min="0" placeholder="Ingrese el Código Postal">
+                    </div>
+
+                    <div class="file-select">
+                        <label for="constancia_sociedad">Constancia:</label>
+                        <div class="container-input">
+                            <input type="file" id="constancia_sociedad" name="constancia_sociedad" class="inputfile inputfile-1" data-multiple-caption="{count} archivos seleccionados" accept=".pdf,.jpg,.png" required>
+                            <label for="constancia_sociedad" class="iborrainputfile-label"> <!-- Cambiamos el atributo 'for' a 'for="constancia_sociedad"' -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="iborrainputfile" width="20" height="17" viewBox="0 0 20 17">
+                                    <path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path>
+                                </svg>
+                                <span class="iborrainputfile">Seleccionar archivo</span>
+                            </label>
+                        </div>
+                    </div>
+
+                </section>
+                <section id="condiciones_comerciales">
+                    <h2>Condiciones Comerciales</h2>
+
+                    <div>
+                        <label for="moneda_facturacion">Moneda de Facturación:</label>
+                        <select id="moneda_facturacion" name="moneda_facturacion" required>
+                            <option value="ARS">ARS - Peso Argentino</option>
+                            <option value="USD">USD - Dólar Estadounidense</option>
+                            <option value="EUR">EUR - Euro </option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="lugar_entrega">Lugar de Entrega:</label>
+                        <input type="text" id="lugar_entrega" name="lugar_entrega" required placeholder="Ingrese el Lugar de Entrega">
+                    </div>
+
+                    <div>
+                        <label for="condicion_pago">Condición de Pago:</label>
+                        <select id="condicion_pago" name="condicion_pago" required>
+                            <option value="15">15 Días FF</option>
+                            <option value="30">30 Días FF</option>
+                            <option value="60">Contado contra entrega</option>
+                        </select>
+                    </div>
+                </section>
+            </section>
+            <button class="collapsible">Informacion de contacto:</button>
+            <section class="bloques" class="content">
+                <section>
+                    <h3>Comercial</h3>
+                    <div>
+                        <label for="contacto_comercial_nombre">Nombre:</label>
+                        <input type="text" id="contacto_comercial_nombre" name="contacto_comercial_nombre" required placeholder="Ingrese el Nombre">
+                    </div>
+
+                    <div>
+                        <label for="contacto_comercial_email">Email:</label>
+                        <input type="email" id="contacto_comercial_email" name="contacto_comercial_email" required placeholder="Ingrese el Email">
+                    </div>
+
+                    <div>
+                        <label for="contacto_comercial_telefono">Teléfono:</label>
+                        <input type="number" id="contacto_comercial_telefono" name="contacto_comercial_telefono" required min="0" placeholder="Ingrese el Teléfono">
+                    </div>
+                </section>
+                <section>
+                    <h3>Administrativo</h3>
+
+                    <div>
+                        <label for="contacto_administrativo_nombre">Nombre:</label>
+                        <input type="text" id="contacto_administrativo_nombre" name="contacto_administrativo_nombre" required placeholder="Ingrese el Nombre">
+                    </div>
+
+                    <div>
+                        <label for="contacto_administrativo_email">Email:</label>
+                        <input type="email" id="contacto_administrativo_email" name="contacto_administrativo_email" required placeholder="Ingrese el Email">
+                    </div>
+
+                    <div>
+                        <label for="contacto_administrativo_telefono">Teléfono:</label>
+                        <input type="number" id="contacto_administrativo_telefono" name="contacto_administrativo_telefono" required min="0" placeholder="Ingrese el Teléfono">
+                    </div>
+                </section>
+                <section>
+                    <h3>Otros</h3>
+
+                    <div>
+                        <label for="contacto_otros_nombre">Nombre:</label>
+                        <input type="text" id="contacto_otros_nombre" name="contacto_otros_nombre" required placeholder="Ingrese el Nombre">
+                    </div>
+
+                    <div>
+                        <label for="contacto_dministrativo_email">Email:</label>
+                        <input type="email" id="contacto_dministrativo_email" name="contacto_dministrativo_email" required placeholder="Ingrese el Email">
+                    </div>
+
+                    <div>
+                        <label for="contacto_dministrativo_telefono">Teléfono:</label>
+                        <input type="number" id="contacto_dministrativo_telefono" name="contacto_dministrativo_telefono" required min="0" placeholder="Ingrese el Teléfono">
+                    </div>
+                </section>
+            </section>
+            <button class="collapsible">Informacion de pago:</button>
+            <section class="bloques" class="content">
+                <section>
+                    <div>
+                        <label for="banco">Banco:</label>
+                        <input type="text" id="banco" name="banco" required placeholder="Ingrese el Banco">
+                    </div>
+
+                    <div>
+                        <label for="cuenta">Cuenta:</label>
+                        <input type="text" id="cuenta" name="cuenta" required placeholder="Ingrese la Cuenta">
+                    </div>
+
+                    <div>
+                        <label for="cbu">CBU:</label>
+                        <input type="text" id="cbu" name="cbu" required min="0" placeholder="Ingrese el CBU">
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        <label for="titular">Titular de la Cuenta:</label>
+                        <input type="text" id="titular" name="titular" required placeholder="Ingrese el Titular de la Cuenta">
+                    </div>
+
+                    <div>
+                        <label for="cuit_pago">CUIT del Titular:</label>
+                        <input type="number" id="cuit_pago" name="cuit_pago" required min="0" placeholder="Ingrese el CUIT del Titular">
+                    </div>
+
+                    <div>
+                        <label for="forma_pago">Forma de Pago:</label>
+                        <select id="forma_pago" name="forma_pago" required>
+                            <option value="transferencia">Transferencia Bancaria</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                </section>
+            </section>
+            <button class="collapsible">Condición Impositiva:</button>
+            <section class="bloques" class="content">
+                <section>
+                    <div>
+                        <label for="clase_factura_emitida">Clase de factura emitida:</label>
+                        <input type="text" id="clase_factura_emitida" name="clase_factura_emitida" required placeholder="Ingrese la Clase de factura emitida">
+                    </div>
+                    <div>
+                        <label for="tipo_iva">Tipo IVA:</label>
+                        <input type="text" id="tipo_iva" name="tipo_iva" required placeholder="Ingrese el Tipo IVA">
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        <label for="tipo_iibb">Tipo IIBB:</label>
+                        <input type="text" id="tipo_iibb" name="tipo_iibb" required placeholder="Ingrese el Tipo IIBB">
+                    </div>
+                    <div>
+                        <label for="n_ingresos_brutos">Nº Ingresos Brutos:</label>
+                        <input type="number" id="n_ingresos_brutos" name="n_ingresos_brutos" required min="0" placeholder="Ingrese el Nº Ingresos Brutos">
+                    </div>
+                </section>
+            </section>
+            <button class="collapsible">Datos adicionales:</button>
+            <section class="bloques" class="content">  
+                <section class="Datos_adicionales">
+                    <div class="file-select">
+                        <label for="adjuntos">Adjuntos:</label>
+                        <div class="container-input">
+                            <input type="file" id="adjuntos" name="adjuntos" class="inputfile inputfile-1" data-multiple-caption="{count} archivos seleccionados" accept=".pdf,.jpg,.png" required>
+                            <label for="adjuntos" class="iborrainputfile-label">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="iborrainputfile" width="20" height="17" viewBox="0 0 20 17">
+                                    <path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path>
+                                </svg>
+                                <span class="iborrainputfile">Seleccionar archivo</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="observaciones">Observaciones:</label>
+                        <textarea id="observaciones" name="observaciones" rows="4" cols="50" placeholder="Ingrese observaciones aquí..."></textarea>
+                    </div>
+                </section>
+            </section>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Laboratorios Poen. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                } 
+            });
+        }
+    </script>
+    <script>
+        'use strict';
+
+    ;(function(document, window, index) {
+        var inputs = document.querySelectorAll('.inputfile');
+        Array.prototype.forEach.call(inputs, function(input) {
+            var label = input.nextElementSibling,
+                labelVal = label.innerHTML;
+
+            input.addEventListener('change', function(e) {
+                var fileName = '';
+                if (this.files && this.files.length > 1)
+                    fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
+                else
+                    fileName = e.target.value.split('\\').pop();
+
+                if (fileName)
+                    label.querySelector('span').innerHTML = fileName;
+                else
+                    label.innerHTML = labelVal;
+            });
+        });
+    }(document, window, 0));
+
+    </script>
+</body>
+</html>
